@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<android.widget.FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/about_us_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#dbdbdb"
+    tools:context="com.codegreed_devs.pambio.AboutUsFragment">
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        tools:layout_editor_absoluteY="8dp"
+        tools:layout_editor_absoluteX="8dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.codegreed_devs.pambio.MyListView
+                android:id="@+id/about_items"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none"
+                />
+        <android.support.v7.widget.CardView
+            android:id="@+id/card_partners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="2dp"
+            android:layout_marginTop="2dp"
+            android:clickable="false"
+            android:foreground="?android:attr/selectableItemBackground"
+            android:padding="5dp"
+            app:cardCornerRadius="2dp"
+            app:cardElevation="4dp">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/partners"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="3dp"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/partners"
+                    android:textColor="@color/text_heading"
+                    android:textSize="20sp" />
+                <com.daimajia.slider.library.SliderLayout
+                    android:id="@+id/slider"
+                    android:layout_width="match_parent"
+                    android:layout_height="240dp"
+                    />
+            </LinearLayout>
+        </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                android:id="@+id/card_social"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="2dp"
+                android:clickable="false"
+                android:foreground="?android:attr/selectableItemBackground"
+                android:padding="5dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/connect"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:text="@string/connect"
+                        android:textStyle="bold"
+                        android:textColor="@color/text_heading"
+                        android:textSize="20sp" />
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+
+                        <ImageView
+                            android:id="@+id/fb"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="2dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginStart="20dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_marginTop="10dp"
+                            android:contentDescription="@string/fb_desc"
+                            />
+                        <ImageView
+                            android:id="@+id/twitter"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="0dp"
+                            android:layout_marginLeft="0dp"
+                            android:layout_marginStart="1dp"
+                            android:layout_marginEnd="1dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_centerHorizontal="true"
+                            android:contentDescription="@string/twitter_desc"/>
+                        <ImageView
+                            android:id="@+id/ig"
+                            android:layout_width="90dp"
+                            android:layout_height="90dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_marginRight="20dp"
+                            android:layout_marginLeft="2dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_marginEnd="20dp"
+                            android:layout_marginTop="10dp"
+                            android:layout_alignParentTop="true"
+                            android:layout_alignParentRight="true"
+                            android:layout_alignParentEnd="true"
+                            android:contentDescription="@string/ig_desc"/>
+                    </RelativeLayout>
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="visible"
+        app:indicatorName="BallClipRotateMultipleIndicator"
+        app:indicatorColor="@color/colorAccent"
+        />
+    <FrameLayout
+        android:id="@+id/no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/network_error"
+            tools:ignore="ContentDescription"
+            />
+
+
+        <TextView
+            android:id="@+id/no_network_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/text_black"
+            android:text="@string/no_network"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="75dp"
+            android:text="@string/no_network_tap"
+            android:textSize="15sp" />
+
+    </FrameLayout>
+
+</android.widget.FrameLayout>

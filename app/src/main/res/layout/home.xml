@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/home_layout"
+    android:orientation="vertical"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="#dbdbdb"
+    android:layout_height="match_parent">
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:clipToPadding="false"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:weightSum="1">
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/pambio_card"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="2dp"
+                        android:layout_marginRight="2dp"
+                        android:layout_marginTop="3dp"
+                        android:clickable="false"
+                        android:foreground="?android:attr/selectableItemBackground"
+                        android:padding="5dp"
+                        app:cardCornerRadius="2dp"
+                        app:cardElevation="4dp">
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:id="@+id/welcome"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textStyle="bold"
+                                android:text="@string/pambio"
+                                android:textColor="@color/text_heading"
+                                android:textSize="20sp" />
+
+                            <TextView
+                                android:id="@+id/textView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/text_black"
+                                android:text="@string/hello"
+                                android:layout_marginBottom="5dp"
+                                />
+                        </LinearLayout>
+
+                    </android.support.v7.widget.CardView>
+
+
+                <com.codegreed_devs.pambio.MyListView
+                    android:id="@+id/home_items"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:scrollbars="none"
+                    />
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/projects_card"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="2dp"
+                    android:layout_marginBottom="4dp"
+                    android:layout_marginRight="2dp"
+                    android:layout_marginTop="3dp"
+                    android:clickable="false"
+                    android:foreground="?android:attr/selectableItemBackground"
+                    android:padding="5dp"
+                    app:cardCornerRadius="2dp"
+                    app:cardElevation="4dp">
+                    <LinearLayout
+                        android:layout_above="@+id/items"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="vertical">
+                        <TextView
+                            android:id="@+id/projects"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginBottom="3dp"
+                            android:gravity="center"
+                            android:textStyle="bold"
+                            android:text="@string/projects"
+                            android:textColor="@color/text_heading"
+                            android:textSize="20sp" />
+                        <com.daimajia.slider.library.SliderLayout
+                            android:id="@+id/slider"
+                            android:layout_width="match_parent"
+                            android:layout_height="240dp"
+                            />
+
+                    </LinearLayout>
+
+                </android.support.v7.widget.CardView>
+            </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+    <RelativeLayout
+        android:id="@+id/obstructor"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:alpha="0.3"
+        android:visibility="gone"
+        android:translationZ="2dp"
+        android:background="@android:color/black" />
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="visible"
+        app:indicatorName="BallClipRotateMultipleIndicator"
+        app:indicatorColor="@color/colorAccent"
+        />
+
+            <FrameLayout
+                android:id="@+id/no_network"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:layout_behavior="@string/appbar_scrolling_view_behavior"
+                android:layout_marginBottom="80dp"
+                android:visibility="gone"
+                >
+
+                <ImageView
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_gravity="center"
+                    android:src="@drawable/network_error"
+                    />
+
+                <TextView
+                    android:id="@+id/no_network_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="35dp"
+                    android:textColor="@color/text_black"
+                    android:text="@string/no_network"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginTop="55dp"
+                    android:text="@string/no_network_tap"
+                    android:textSize="15sp" />
+
+            </FrameLayout>
+
+    </FrameLayout>
+    <io.github.yavski.fabspeeddial.FabSpeedDial
+        android:id="@+id/fab_speed_dial"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|end"
+        app:theme="@style/ActivityTheme"
+        android:clickable="true"
+        app:fabGravity="bottom_end"
+        app:fabMenu="@menu/fab_menu"
+        app:miniFabBackgroundTint="@android:color/white"
+        app:miniFabDrawableTint="?attr/colorAccent"
+        app:miniFabTitleTextColor="?attr/colorAccent"
+        android:focusable="true" />
+
+
+</FrameLayout>

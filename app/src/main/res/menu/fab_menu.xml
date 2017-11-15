@@ -1,0 +1,16 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item
+        android:id="@+id/group_chat"
+        android:icon="@drawable/group_chat"
+        android:title="@string/chat" />
+    <item
+        android:id="@+id/join_us"
+        android:icon="@drawable/join_us"
+        android:title="@string/join" />
+    <item
+        android:id="@+id/donate"
+        android:icon="@drawable/donate"
+        android:title="@string/donate"/>
+
+</menu>

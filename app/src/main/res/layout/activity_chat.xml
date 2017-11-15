@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:background="#ccd7dd"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    tools:context="com.codegreed_devs.pambio.ChatActivity">
+
+    <android.support.design.widget.FloatingActionButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/send"
+        android:id="@+id/fab"
+        android:layout_marginStart="4dp"
+        android:layout_marginLeft="4dp"
+        android:layout_marginRight="6dp"
+        android:layout_marginEnd="6dp"
+        android:layout_marginBottom="15dp"
+        android:tint="@android:color/white"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        app:fabSize="mini"
+        android:layout_alignParentRight="true" />
+
+
+
+    <EditText
+        android:id="@+id/input"
+        android:layout_toLeftOf="@id/fab"
+        android:layout_toStartOf="@+id/fab"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:layout_marginEnd="5dp"
+        android:paddingLeft="8dp"
+        android:textColor="@color/text_black"
+        android:hint="@string/message"
+        android:paddingStart="8dp"
+        android:paddingEnd="8dp"
+        android:paddingRight="8dp"
+        android:paddingBottom="8dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginStart="5dp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/message_input"
+        android:minHeight="45dp" />
+
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:dividerHeight="16dp"
+        android:transcriptMode="alwaysScroll"
+        android:smoothScrollbar="true"
+        android:stackFromBottom="true"
+        android:listSelector="@color/transparent"
+        android:layout_marginBottom="10dp"
+        android:divider="@android:color/transparent"
+        android:id="@+id/list_of_messages"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/input" />
+
+</RelativeLayout>

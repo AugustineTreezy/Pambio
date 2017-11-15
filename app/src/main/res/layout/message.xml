@@ -1,0 +1,186 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent" android:layout_height="match_parent"
+    >
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/their_sms"
+        android:clickable="false"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/image_message_profile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/arrow_left"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/arrow_bg2"
+            android:layout_below="@+id/message_user"
+            android:layout_toRightOf="@+id/image_message_profile"
+            android:layout_toEndOf="@+id/image_message_profile"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/receiver_name"
+            android:id="@+id/message_user"
+            android:textStyle="normal|bold"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/image_message_profile"
+            android:layout_toEndOf="@+id/image_message_profile" />
+
+
+        <TextView
+            android:id="@+id/message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:minWidth="110dp"
+            android:paddingLeft="10dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginEnd="10dp"
+            android:background="@drawable/view_sender"
+            android:text="@string/receiver_text"
+            android:textColor="#000"
+            android:layout_below="@+id/message_user"
+            android:layout_toRightOf="@+id/arrow_left"
+            android:layout_toEndOf="@+id/arrow_left" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+            android:textStyle="italic"
+            android:id="@+id/message_time"
+            android:layout_alignBottom="@+id/message_text"
+            android:layout_alignRight="@+id/message_text"
+            android:layout_alignEnd="@+id/message_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+            android:id="@+id/message_date"
+            android:layout_toRightOf="@+id/message_user"
+            android:layout_toEndOf="@+id/message_user" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:id="@+id/my_sms"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/their_sms"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:id="@+id/my_image_message_profile"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            android:src="@drawable/dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            tools:ignore="ContentDescription" />
+
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:src="@drawable/arrow_bg1"
+            android:layout_below="@+id/my_message_user"
+            android:layout_toLeftOf="@+id/my_image_message_profile"
+            android:layout_toStartOf="@+id/my_image_message_profile"
+            tools:ignore="ContentDescription" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/sender_name"
+            android:id="@+id/my_message_user"
+            android:textStyle="normal|bold"
+            android:layout_alignTop="@+id/my_image_message_profile"
+            android:layout_toLeftOf="@+id/my_image_message_profile"
+            android:layout_toStartOf="@+id/my_image_message_profile" />
+
+
+        <TextView
+            android:id="@+id/my_message_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
+            android:minWidth="110dp"
+            android:paddingStart="10dp"
+            android:paddingEnd="10dp"
+            android:paddingRight="10dp"
+            android:paddingBottom="20dp"
+            android:paddingTop="10dp"
+            android:background="@drawable/view_mine"
+            android:text="@string/sender_text"
+            android:textColor="#000"
+            android:layout_below="@+id/my_message_user"
+            android:layout_toLeftOf="@+id/arrow_right"
+            android:layout_toStartOf="@+id/arrow_right" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/time"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+            android:textStyle="italic"
+            android:id="@+id/my_message_time"
+            android:layout_alignBottom="@+id/my_message_text"
+            android:layout_alignLeft="@+id/my_message_text"
+            android:layout_alignStart="@+id/my_message_text" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/date"
+            android:paddingLeft="8dp"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"
+            android:paddingRight="8dp"
+            android:paddingBottom="3dp"
+            android:layout_alignRight="@+id/my_message_user"
+            android:layout_alignEnd="@+id/my_message_user"
+            android:id="@+id/my_message_date"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_marginRight="80dp"
+            android:layout_marginEnd="80dp" />
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+</RelativeLayout>

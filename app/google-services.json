@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "79576444833",
+    "firebase_url": "https://pambioke-7ef29.firebaseio.com",
+    "project_id": "pambioke-7ef29",
+    "storage_bucket": "pambioke-7ef29.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79576444833:android:1072aca2ea1d2208",
+        "android_client_info": {
+          "package_name": "com.codegreed_devs.pambio"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79576444833-68t95lvbbpa3ptfba3aolvr49pv6is2b.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.codegreed_devs.pambio",
+            "certificate_hash": "7b76aa04f4dabd06f0dd8427bfac619a99da7616"
+          }
+        },
+        {
+          "client_id": "79576444833-nmhv2cqvvfhhjmosbuh500s81t6upjud.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDnRbBatKBZdv8q9lOHj0o4dYRLUcBCMaI"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79576444833-nmhv2cqvvfhhjmosbuh500s81t6upjud.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

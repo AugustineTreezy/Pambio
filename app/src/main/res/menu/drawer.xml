@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:title="@string/we_do">
+        <menu>
+            <group
+                android:menuCategory="container"
+                android:id="@+id/abt_title"
+                android:checkableBehavior="single">
+
+                <item
+                    android:id="@+id/mentor"
+                    android:icon="@drawable/mentor"
+                    android:title="@string/mentor"/>
+
+                <item
+                    android:id="@+id/green_prt"
+                    android:icon="@drawable/green"
+                    android:title="@string/green_prt"/>
+
+                <item
+                    android:id="@+id/peace_edu"
+                    android:icon="@drawable/peace_edu"
+                    android:title="@string/peace_edu"/>
+
+                <item
+                    android:id="@+id/peace_advo"
+                    android:icon="@drawable/peace_ad"
+                    android:title="@string/peace_advo"/>
+
+                <item
+                    android:id="@+id/health"
+                    android:icon="@drawable/health"
+                    android:title="@string/health"/>
+
+                <item
+                    android:id="@+id/life_skills"
+                    android:icon="@drawable/life_skills"
+                    android:title="@string/life_skills"/>
+                <item
+                    android:id="@+id/face_ps"
+                    android:icon="@drawable/face_peace"
+                    android:title="@string/face_ps"/>
+
+
+            </group>
+        </menu>
+    </item>
+    <item android:title="Communicate">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+
+                android:title="Share" />
+            <item
+                android:id="@+id/nav_send"
+
+                android:title="Send" />
+        </menu>
+    </item>
+
+
+
+</menu>

@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_height="match_parent"
+    android:id="@+id/mentor_layout"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    <LinearLayout
+        android:id="@+id/mentor_items"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        >
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="1dp"
+        android:padding="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/about"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/about"
+                android:textColor="@color/text_heading"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/about_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_black"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:gravity="center"
+                android:text="@string/about_desc"
+                android:layout_marginBottom="5dp"
+                />
+
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp"
+        android:layout_marginTop="1dp"
+        android:padding="5dp"
+        app:cardCornerRadius="2dp"
+        app:cardElevation="4dp">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/activities"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:text="@string/activities"
+                android:textColor="@color/text_heading"
+                android:textSize="20sp" />
+
+            <TextView
+                android:id="@+id/activities_desc"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textColor="@color/text_black"
+                android:layout_marginRight="6dp"
+                android:layout_marginLeft="6dp"
+                android:gravity="left"
+                android:text="@string/about_desc"
+                android:layout_marginBottom="5dp"
+                />
+
+
+
+        </LinearLayout>
+
+    </android.support.v7.widget.CardView>
+    </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/network_error"
+            />
+
+        <TextView
+            android:id="@+id/no_network_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/text_black"
+            android:text="@string/no_network"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:text="@string/no_network_tap"
+            android:textSize="15sp" />
+
+    </FrameLayout>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="visible"
+        app:indicatorName="BallClipRotateMultipleIndicator"
+        app:indicatorColor="@color/colorAccent"
+        />
+
+</FrameLayout>
