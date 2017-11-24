@@ -17,6 +17,16 @@
             android:layout_height="wrap_content"
             app:contentScrim="?attr/colorPrimary"
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
+            <com.wang.avi.AVLoadingIndicatorView
+                android:id="@+id/avi"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                style="@style/AVLoadingIndicatorView.Large"
+                android:visibility="visible"
+                app:indicatorName="BallClipRotateMultipleIndicator"
+                app:indicatorColor="#a20a47"
+                />
             <ImageView
                 android:id="@+id/single_event_image"
                 app:layout_collapseMode="pin"
@@ -42,6 +52,7 @@
         app:layout_behavior="@string/appbar_scrolling_view_behavior"
         >
         <LinearLayout
+            android:id="@+id/single_items_layout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical">

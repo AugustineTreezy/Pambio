@@ -32,7 +32,6 @@
         <item name="colorAccent">#FF4081</item>
     </style>
 
-
     <style name="AppTheme.NoActionBar">
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>

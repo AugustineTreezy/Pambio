@@ -27,54 +27,50 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
-        tools:replace="android:supportsRtl">
+        tools:replace="android:supportsRtl"
+        android:fullBackupContent="@xml/backup_descriptor">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_android_map_api_key" />
 
-        <activity android:name=".MainActivity" />
+        <activity android:name=".Activities.MainActivity" />
         <activity
-            android:name=".MentorActivity"
+            android:name=".Activities.MentorActivity"
             android:label="@string/mentor"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".GreenPrintActivity"
+            android:name=".Activities.GreenPrintActivity"
             android:label="@string/green_prt"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".PeaceEduActivity"
+            android:name=".Activities.PeaceEduActivity"
             android:label="@string/peace_edu"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".PeaceAdvoActivity"
+            android:name=".Activities.PeaceAdvoActivity"
             android:label="@string/peace_advo"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".HealthActivity"
+            android:name=".Activities.HealthActivity"
             android:label="@string/health"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".LifeSkillsActivity"
+            android:name=".Activities.LifeSkillsActivity"
             android:label="@string/life_skills"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".FacePeaceActivity"
-            android:label="@string/face_ps"
-            android:parentActivityName=".MainActivity"
-            android:theme="@style/ActivityTheme" />
-        <activity
-            android:name=".ChatActivity"
+            android:name=".Activities.ChatActivity"
             android:label="@string/chat"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
         <activity
-            android:name=".SplashActivity"
+            android:name=".Activities.SplashActivity"
             android:theme="@style/SplashTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -83,18 +79,35 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".SingleEventActivity"
+            android:name=".Activities.SingleEventActivity"
             android:label="@string/event_desc"
-            android:parentActivityName=".MainActivity"
-             />
-        <activity android:name=".JoinUsActivity"
+            android:parentActivityName=".Activities.MainActivity" />
+        <activity
+            android:name=".Activities.JoinUsActivity"
             android:label="@string/join"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
-        <activity android:name=".DonateActivity"
+        <activity
+            android:name=".Activities.DonateActivity"
             android:label="@string/donate"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".Activities.MainActivity"
             android:theme="@style/ActivityTheme" />
+        <activity
+            android:name=".Activities.LoginActivity"
+            android:theme="@style/SplashTheme" />
+        <activity
+            android:name=".Activities.SettingsActivity"
+            android:label="@string/settings"
+            android:parentActivityName=".Activities.MainActivity"
+            android:theme="@style/ActivityTheme" />
+        <activity android:name=".Activities.AboutAppActivity"
+            android:label="@string/about_app"
+            android:parentActivityName=".Activities.SettingsActivity"
+            android:theme="@style/ActivityTheme"/>
+        <activity android:name=".Activities.UpdateProfileActivity"
+            android:label="@string/update_prof"
+            android:parentActivityName=".Activities.SettingsActivity"
+            android:theme="@style/ActivityTheme"/>
     </application>
 
 </manifest>

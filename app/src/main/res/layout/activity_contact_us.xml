@@ -292,11 +292,12 @@
             app:cardElevation="4dp">
             <TextView
                 android:layout_width="match_parent"
-                android:textColor="@color/text_black"
+                android:textColor="@color/text_heading"
                 android:gravity="center_horizontal"
                 android:textSize="20sp"
                 android:layout_height="wrap_content"
                 android:text="@string/contact_form"
+                android:textStyle="bold"
                  />
             <LinearLayout
                 android:layout_marginTop="30dp"
@@ -309,12 +310,12 @@
             <EditText
                 android:lines="2"
                 android:layout_width="match_parent"
-                android:background="@drawable/chat_input"
+                android:background="@drawable/text_input"
                 android:paddingStart="3dp"
                 android:hint="@string/subject"
-                android:layout_marginEnd="3dp"
+                android:layout_marginEnd="8dp"
                 android:layout_marginBottom="10dp"
-                android:layout_marginRight="3dp"
+                android:layout_marginRight="8dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextSubject"
                 android:paddingRight="3dp"
@@ -328,10 +329,10 @@
                 android:paddingStart="3dp"
                 android:paddingLeft="3dp"
                 android:paddingEnd="3dp"
-                android:layout_marginEnd="3dp"
-                android:layout_marginRight="3dp"
+                android:layout_marginEnd="8dp"
+                android:layout_marginRight="8dp"
                 android:layout_width="match_parent"
-                android:background="@drawable/chat_input"
+                android:background="@drawable/text_input"
                 android:layout_marginBottom="8dp"
                 android:layout_height="wrap_content"
                 android:id="@+id/editTextMessage" />

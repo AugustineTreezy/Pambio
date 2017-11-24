@@ -7,7 +7,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#dbdbdb"
-    tools:context="com.codegreed_devs.pambio.AboutUsFragment">
+    tools:context="com.codegreed_devs.pambio.Fragments.AboutUsFragment">
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -20,7 +20,7 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.codegreed_devs.pambio.MyListView
+            <com.codegreed_devs.pambio.Models.MyListView
                 android:id="@+id/about_items"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"

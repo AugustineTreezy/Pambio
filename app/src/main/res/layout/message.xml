@@ -1,31 +1,36 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent" android:layout_height="match_parent"
+    android:id="@+id/chat_layout"
     >
+
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:id="@+id/their_sms"
-        android:clickable="false"
         android:layout_height="wrap_content">
 
         <ImageView
-            android:id="@+id/image_message_profile"
+            android:id="@+id/receivers_pic"
             android:layout_width="45dp"
             android:layout_height="45dp"
-            android:src="@drawable/dp"
+            android:src="@drawable/ic_dp"
+            android:layout_marginStart="2dp"
+            android:layout_marginTop="15dp"
             android:layout_alignParentTop="true"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            tools:ignore="ContentDescription" />
+            tools:ignore="ContentDescription"
+            android:layout_marginLeft="2dp" />
 
         <ImageView
             android:id="@+id/arrow_left"
             android:layout_width="15dp"
             android:layout_height="15dp"
+
             android:src="@drawable/arrow_bg2"
             android:layout_below="@+id/message_user"
-            android:layout_toRightOf="@+id/image_message_profile"
-            android:layout_toEndOf="@+id/image_message_profile"
+            android:layout_toRightOf="@+id/receivers_pic"
+            android:layout_toEndOf="@+id/receivers_pic"
             tools:ignore="ContentDescription" />
         <TextView
             android:layout_width="wrap_content"
@@ -34,8 +39,8 @@
             android:id="@+id/message_user"
             android:textStyle="normal|bold"
             android:layout_alignParentTop="true"
-            android:layout_toRightOf="@+id/image_message_profile"
-            android:layout_toEndOf="@+id/image_message_profile" />
+            android:layout_toRightOf="@+id/receivers_pic"
+            android:layout_toEndOf="@+id/receivers_pic" />
 
 
         <TextView
@@ -86,63 +91,54 @@
 
     </RelativeLayout>
     <RelativeLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:id="@+id/my_sms"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/their_sms"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentStart="true">
+        >
 
-        <ImageView
-            android:id="@+id/my_image_message_profile"
-            android:layout_width="45dp"
-            android:layout_height="45dp"
-            android:src="@drawable/dp"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            tools:ignore="ContentDescription" />
 
         <ImageView
             android:id="@+id/arrow_right"
             android:layout_width="15dp"
             android:layout_height="15dp"
+            android:layout_marginTop="53dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="5dp"
+            android:layout_marginRight="5dp"
             android:src="@drawable/arrow_bg1"
-            android:layout_below="@+id/my_message_user"
-            android:layout_toLeftOf="@+id/my_image_message_profile"
-            android:layout_toStartOf="@+id/my_image_message_profile"
             tools:ignore="ContentDescription" />
+
         <TextView
+            android:id="@+id/my_message_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginEnd="16dp"
+            android:layout_marginRight="16dp"
             android:text="@string/sender_name"
-            android:id="@+id/my_message_user"
-            android:textStyle="normal|bold"
-            android:layout_alignTop="@+id/my_image_message_profile"
-            android:layout_toLeftOf="@+id/my_image_message_profile"
-            android:layout_toStartOf="@+id/my_image_message_profile" />
+            android:textStyle="normal|bold" />
 
 
         <TextView
             android:id="@+id/my_message_text"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:paddingLeft="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_marginStart="10dp"
-            android:minWidth="110dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="10dp"
-            android:background="@drawable/view_mine"
-            android:text="@string/sender_text"
-            android:textColor="#000"
+            android:layout_alignEnd="@+id/my_message_user"
+            android:layout_alignRight="@+id/my_message_user"
             android:layout_below="@+id/my_message_user"
-            android:layout_toLeftOf="@+id/arrow_right"
-            android:layout_toStartOf="@+id/arrow_right" />
+            android:background="@drawable/view_mine"
+            android:minWidth="110dp"
+            android:paddingBottom="20dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/sender_text"
+            android:textColor="#000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -157,30 +153,23 @@
             android:layout_alignBottom="@+id/my_message_text"
             android:layout_alignLeft="@+id/my_message_text"
             android:layout_alignStart="@+id/my_message_text" />
+
         <TextView
+            android:id="@+id/my_message_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/date"
-            android:paddingLeft="8dp"
-            android:paddingStart="8dp"
-            android:paddingEnd="8dp"
-            android:paddingRight="8dp"
-            android:paddingBottom="3dp"
-            android:layout_alignRight="@+id/my_message_user"
-            android:layout_alignEnd="@+id/my_message_user"
-            android:id="@+id/my_message_date"
             android:layout_alignParentTop="true"
-            android:layout_alignParentRight="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginRight="80dp"
-            android:layout_marginEnd="80dp" />
+            android:layout_toLeftOf="@+id/my_message_user"
+            android:layout_toStartOf="@+id/my_message_user"
+            android:paddingBottom="3dp"
+            android:paddingEnd="8dp"
+            android:paddingLeft="8dp"
+            android:paddingRight="8dp"
+            android:paddingStart="8dp"
+            android:text="@string/date" />
 
 
 
     </RelativeLayout>
-
-
-
-
 
 </RelativeLayout>

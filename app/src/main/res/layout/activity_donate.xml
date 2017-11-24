@@ -1,9 +1,240 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.codegreed_devs.pambio.DonateActivity">
+    android:id="@+id/donate_layout"
+    >
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:id="@+id/donate_items"
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
 
-</android.support.constraint.ConstraintLayout>
+            >
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:padding="5dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/mobile_money"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/mobile_money"
+                        android:textColor="@color/text_heading"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/mobile_money_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textColor="@color/text_black"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="center"
+                        android:text="@string/mobile_money_desc"
+                        android:layout_marginBottom="5dp"
+                        />
+
+
+
+
+                </LinearLayout>
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:padding="5dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp">
+
+                    <TextView
+                        android:id="@+id/cheque"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        android:text="@string/cheque"
+                        android:textColor="@color/text_heading"
+                        android:textSize="20sp" />
+
+                    <TextView
+                        android:id="@+id/ac_name"
+                        android:layout_marginTop="30dp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:textStyle="bold"
+                        android:layout_marginRight="6dp"
+                        android:layout_marginLeft="6dp"
+                        android:gravity="start"
+                        android:text="@string/ac_name"
+                        android:layout_marginBottom="5dp"
+                        />
+                    <TextView
+                        android:layout_marginStart="30dp"
+                        android:layout_marginTop="30dp"
+                        android:id="@+id/ac_name_desc"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text_black"
+                        android:layout_marginRight="10dp"
+                        android:layout_marginLeft="105dp"
+                        android:gravity="start"
+                        android:text="@string/ac_name_desc"
+                        android:layout_marginBottom="5dp"
+                        android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/ac_no"
+                    android:layout_marginTop="60dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="start"
+                    android:text="@string/ac_no"
+                    android:layout_marginBottom="5dp"
+                    />
+                <TextView
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="60dp"
+                    android:id="@+id/ac_no_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="120dp"
+                    android:gravity="start"
+                    android:text="@string/ac_no_desc"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp" />
+                <TextView
+                    android:id="@+id/bank"
+                    android:layout_marginTop="90dp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:textStyle="bold"
+                    android:layout_marginRight="6dp"
+                    android:layout_marginLeft="6dp"
+                    android:gravity="start"
+                    android:text="@string/bank"
+                    android:layout_marginBottom="5dp"
+                    />
+                <TextView
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="90dp"
+                    android:id="@+id/bank_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/text_black"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="45dp"
+                    android:gravity="start"
+                    android:text="@string/bank_desc"
+                    android:layout_marginBottom="5dp"
+                    android:layout_marginEnd="10dp" />
+
+
+
+            </android.support.v7.widget.CardView>
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="2dp"
+                android:layout_marginRight="2dp"
+                android:layout_marginTop="1dp"
+                android:padding="5dp"
+                app:cardCornerRadius="2dp"
+                app:cardElevation="4dp">
+                <TextView
+                    android:id="@+id/paypal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:textStyle="bold"
+                    android:text="@string/paypal"
+                    android:textColor="@color/text_heading"
+                    android:textSize="20sp" />
+                <Button
+                    android:id="@+id/donate_btn"
+                    android:layout_marginTop="35dp"
+                    android:background="@drawable/btn"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/donate"/>
+
+            </android.support.v7.widget.CardView>
+        </LinearLayout>
+    </ScrollView>
+    <FrameLayout
+        android:id="@+id/no_network"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"
+        android:layout_marginBottom="80dp"
+        android:visibility="gone"
+        >
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:src="@drawable/network_error"
+            />
+
+        <TextView
+            android:id="@+id/no_network_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="35dp"
+            android:textColor="@color/text_black"
+            android:text="@string/no_network"
+            android:textSize="25sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="55dp"
+            android:text="@string/no_network_tap"
+            android:textSize="15sp" />
+
+    </FrameLayout>
+    <com.wang.avi.AVLoadingIndicatorView
+        android:id="@+id/avi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        style="@style/AVLoadingIndicatorView.Large"
+        android:visibility="visible"
+        app:indicatorName="BallClipRotateMultipleIndicator"
+        app:indicatorColor="@color/colorAccent"
+        />
+
+</FrameLayout>
