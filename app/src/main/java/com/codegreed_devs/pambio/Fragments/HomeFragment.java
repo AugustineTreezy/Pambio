@@ -18,7 +18,6 @@ import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
-
 import com.codegreed_devs.pambio.Adapters.HomeItemsAdapter;
 import com.codegreed_devs.pambio.Activities.ChatActivity;
 import com.codegreed_devs.pambio.Activities.DonateActivity;
@@ -39,6 +38,8 @@ import org.json.JSONObject;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
+
 import cz.msebera.android.httpclient.Header;
 import io.github.yavski.fabspeeddial.FabSpeedDial;
 import io.github.yavski.fabspeeddial.SimpleMenuListenerAdapter;
@@ -58,6 +59,8 @@ public class HomeFragment extends Fragment {
     AVLoadingIndicatorView avi;
     TextView no_network_text;
 
+
+
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         final View rootView = inflater.inflate(R.layout.home, container, false);
@@ -65,8 +68,9 @@ public class HomeFragment extends Fragment {
         home_layout = rootView.findViewById(R.id.home_layout);
         no_network = rootView.findViewById(R.id.no_network);
         no_network_text = rootView.findViewById(R.id.no_network_text);
-        //initializng the progress bar
+        //initializing the progress bar
         avi = rootView.findViewById(R.id.avi);
+
 
         //hiding layouts while progress bar loadings
         pambio_card = rootView.findViewById(R.id.pambio_card);
@@ -229,10 +233,11 @@ public class HomeFragment extends Fragment {
 
     public void AddImagesUrlOnline() {
         HashMapForURL = new HashMap<>();
+
         HashMapForURL.put("American Friends Service Committee", "http://www.kimesh.com/pambio/images/sliders/partners/2.png");
         HashMapForURL.put("American  Service Committee", "http://www.kimesh.com/pambio/images/sliders/partners/3.png");
 
-//        AsyncHttpClient asyncHttpClient=new AsyncHttpClient();
+//        AsyncHttpClient asyncHttpClient = new AsyncHttpClient();
 //        asyncHttpClient.post("http://www.kimesh.com/pambio/home_slider.php", new TextHttpResponseHandler() {
 //            @Override
 //            public void onFailure(int i, Header[] headers, String s, Throwable throwable) {
@@ -243,15 +248,15 @@ public class HomeFragment extends Fragment {
 //            public void onSuccess(int i, Header[] headers, String s) {
 //                try {
 //                    JSONArray jsonArray = new JSONArray(s);
+//
 //                    for (int a = 0; a < jsonArray.length(); a++) {
+//
 //                        JSONObject on_mentor = jsonArray.getJSONObject(a);
 //                        String image = on_mentor.getString("image");
 //                        String description = on_mentor.getString("description");
-//                        putter(description,image);
-//                        //Toast.makeText(getContext(), "Successfully", Toast.LENGTH_SHORT).show();
-//                        //
-//                        //
-//                        }
+//                        HashMapForURL.put(description,image);
+//
+//                    }
 //                } catch (JSONException e) {
 //                    e.printStackTrace();
 //                }
@@ -260,18 +265,8 @@ public class HomeFragment extends Fragment {
 //        });
 
     }
-//    public void putter(String dec,String img){
-//
-//        HashMapForURL.put(dec,img);
-//
-//        if (HashMapForURL.isEmpty()) {
-//
-//        }
-//        }else{
-//            HashMapForURL.put("American Friends Service Committee","http://www.kimesh.com/pambio/images/sliders/partners/2.png");
-//        }
 
-//    }
+
 
 
 

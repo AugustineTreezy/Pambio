@@ -1,6 +1,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent" android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
     android:id="@+id/chat_layout"
     >
 
@@ -26,13 +27,12 @@
             android:id="@+id/arrow_left"
             android:layout_width="15dp"
             android:layout_height="15dp"
-
-            android:src="@drawable/arrow_bg2"
             android:layout_below="@+id/message_user"
-            android:layout_toRightOf="@+id/receivers_pic"
             android:layout_toEndOf="@+id/receivers_pic"
+            android:layout_toRightOf="@+id/receivers_pic"
+            android:src="@drawable/arrow_bg2"
             tools:ignore="ContentDescription" />
-        <TextView
+        <com.vanniktech.emoji.EmojiTextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="@string/receiver_name"
@@ -43,25 +43,25 @@
             android:layout_toEndOf="@+id/receivers_pic" />
 
 
-        <TextView
+        <com.vanniktech.emoji.EmojiTextView
             android:id="@+id/message_text"
+            android:textIsSelectable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:minWidth="110dp"
-            android:paddingLeft="10dp"
-            android:paddingStart="10dp"
-            android:paddingEnd="10dp"
-            android:paddingRight="10dp"
-            android:paddingBottom="20dp"
-            android:paddingTop="10dp"
-            android:layout_marginRight="10dp"
-            android:layout_marginEnd="10dp"
-            android:background="@drawable/view_sender"
-            android:text="@string/receiver_text"
-            android:textColor="#000"
             android:layout_below="@+id/message_user"
+            android:layout_toEndOf="@+id/arrow_left"
             android:layout_toRightOf="@+id/arrow_left"
-            android:layout_toEndOf="@+id/arrow_left" />
+            android:background="@drawable/view_sender"
+            android:minWidth="110dp"
+            android:textSize="16sp"
+            android:paddingBottom="20dp"
+            android:paddingEnd="10dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:paddingStart="10dp"
+            android:paddingTop="10dp"
+            android:text="@string/receiver_text"
+            android:textColor="#000" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -93,23 +93,12 @@
     <RelativeLayout
         android:layout_width="wrap_content"
         android:id="@+id/my_sms"
+        android:layout_alignParentEnd="true"
         android:layout_height="wrap_content"
-        >
+        android:layout_alignParentRight="true">
 
 
-        <ImageView
-            android:id="@+id/arrow_right"
-            android:layout_width="15dp"
-            android:layout_height="15dp"
-            android:layout_marginTop="53dp"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:layout_marginEnd="5dp"
-            android:layout_marginRight="5dp"
-            android:src="@drawable/arrow_bg1"
-            tools:ignore="ContentDescription" />
-
-        <TextView
+        <com.vanniktech.emoji.EmojiTextView
             android:id="@+id/my_message_user"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -122,8 +111,9 @@
             android:textStyle="normal|bold" />
 
 
-        <TextView
+        <com.vanniktech.emoji.EmojiTextView
             android:id="@+id/my_message_text"
+            android:textIsSelectable="true"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignEnd="@+id/my_message_user"
@@ -133,6 +123,7 @@
             android:minWidth="110dp"
             android:paddingBottom="20dp"
             android:paddingEnd="10dp"
+            android:textSize="16sp"
             android:paddingLeft="10dp"
             android:paddingRight="10dp"
             android:paddingStart="10dp"
@@ -168,8 +159,22 @@
             android:paddingStart="8dp"
             android:text="@string/date" />
 
+        <ImageView
+            android:id="@+id/arrow_right"
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_alignBottom="@+id/my_message_text"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginEnd="8dp"
+            android:layout_marginRight="8dp"
+            android:src="@drawable/arrow_bg1"
+            tools:ignore="ContentDescription" />
+
 
 
     </RelativeLayout>
+
+
 
 </RelativeLayout>

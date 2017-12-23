@@ -174,7 +174,8 @@ public class MainActivity extends AppCompatActivity {
                         startActivity(green_prt);
                         break;
                     case R.id.peace_edu:
-                        Intent peace_edu=new Intent(MainActivity.this,PeaceEduActivity.class);
+                        Intent peace_edu;
+                        peace_edu = new Intent(MainActivity.this,PeaceEduActivity.class);
                         startActivity(peace_edu);
                         break;
                     case R.id.peace_advo:
@@ -257,7 +258,7 @@ public class MainActivity extends AppCompatActivity {
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle actionh bar item clicks here. The action bar will
+        // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the HomeFragment/Up button, so long
         // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();

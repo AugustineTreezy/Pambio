@@ -27,12 +27,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/AppTheme"
+        android:hardwareAccelerated="true"
         tools:replace="android:supportsRtl"
         android:fullBackupContent="@xml/backup_descriptor">
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="@string/google_android_map_api_key" />
 
+        <activity android:name="com.theartofdev.edmodo.cropper.CropImageActivity"
+            android:theme="@style/Base.Theme.AppCompat"/>
         <activity android:name=".Activities.MainActivity" />
         <activity
             android:name=".Activities.MentorActivity"
@@ -104,7 +107,7 @@
             android:label="@string/about_app"
             android:parentActivityName=".Activities.SettingsActivity"
             android:theme="@style/ActivityTheme"/>
-        <activity android:name=".Activities.UpdateProfileActivity"
+        <activity android:name=".Activities.EditProfileActivity"
             android:label="@string/update_prof"
             android:parentActivityName=".Activities.SettingsActivity"
             android:theme="@style/ActivityTheme"/>

@@ -40,7 +40,7 @@ import es.dmoral.toasty.Toasty;
 
 
 /**
- * Created by rufflez on 6/21/15.
+ * Created by augustine on 6/21/15.
  */
 public class ContactUsFragment extends Fragment implements OnMapReadyCallback {
     AVLoadingIndicatorView avi;
@@ -60,7 +60,7 @@ public class ContactUsFragment extends Fragment implements OnMapReadyCallback {
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState){
         mView = inflater.inflate(R.layout.activity_contact_us, container, false);
-        //initializng the progress bar
+        //initializing the progress bar
         avi=mView .findViewById(R.id.avi);
 
         //Initializing the views
@@ -182,6 +182,8 @@ public class ContactUsFragment extends Fragment implements OnMapReadyCallback {
                 send.putExtra(Intent.EXTRA_SUBJECT   , subject);
                 send.putExtra(Intent.EXTRA_TEXT   , message);
 
+                editTextSubject.setText("");
+                editTextMessage.setText("");
                 try {
                     send.setPackage("com.google.android.gm");
                     startActivity(send);
@@ -224,7 +226,7 @@ public class ContactUsFragment extends Fragment implements OnMapReadyCallback {
         googleMap.getUiSettings().setAllGesturesEnabled(true);
         googleMap.getUiSettings().isZoomControlsEnabled();
         googleMap.getUiSettings().setMapToolbarEnabled(true);
-        googleMap.addMarker(new MarkerOptions().position(new LatLng(0.284477,34.755286)).title("Peace Ambassadors Kenya Integration Organization. (Pambio)").snippet("Our location"));
+        googleMap.addMarker(new MarkerOptions().position(new LatLng(0.284477,34.755286)).title("Peace Ambassadors Kenya").snippet("Our location"));
         CameraPosition pambio=CameraPosition.builder().target(new LatLng(0.284477,34.755286)).zoom(16).bearing(0).tilt(45).build();
         googleMap.moveCamera(CameraUpdateFactory.newCameraPosition(pambio));
 

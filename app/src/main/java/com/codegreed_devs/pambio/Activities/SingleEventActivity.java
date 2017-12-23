@@ -125,7 +125,6 @@ public class SingleEventActivity extends AppCompatActivity {
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                check_permission();
                 confirm_add_event();
 
             }
@@ -135,7 +134,6 @@ public class SingleEventActivity extends AppCompatActivity {
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         if (requestCode==100 && grantResults[0]==PackageManager.PERMISSION_GRANTED){
-            create_event();
 
 
         }else {
@@ -241,6 +239,7 @@ public class SingleEventActivity extends AppCompatActivity {
         confirmation.setPositiveButton("Yes", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
+                check_permission();
                 create_event();
 
             }

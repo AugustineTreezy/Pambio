@@ -10,7 +10,6 @@ import android.text.Html;
 import android.view.View;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
-import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -39,7 +38,7 @@ public class SettingsActivity extends AppCompatActivity {
                 .playOn(settings_list);
 
 
-        String[] items={"Update Profile","Log Out","About App"};
+        String[] items={"Edit Profile","Log Out","About App"};
         ArrayAdapter<String> adapter= new ArrayAdapter<>(this, R.layout.list_style, items);
 
         settings_list.setAdapter(adapter);
@@ -48,15 +47,16 @@ public class SettingsActivity extends AppCompatActivity {
             public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
                 switch (position){
                     case(0):
-                        Intent update=new Intent(SettingsActivity.this,UpdateProfileActivity.class);
+                        Intent update=new Intent(SettingsActivity.this,EditProfileActivity.class);
                         startActivity(update);
+                        break;
+                    case 1:
+                        confirm_log_out();
                         break;
                     case 2:
                         Intent about=new Intent(SettingsActivity.this,AboutAppActivity.class);
                         startActivity(about);
                         break;
-                    default:
-                        confirm_log_out();
                 }
             }
         });

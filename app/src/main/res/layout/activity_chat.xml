@@ -2,7 +2,7 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/activity_main"
+    android:id="@+id/activity_chat"
     android:background="#ccb0d3"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -27,17 +27,23 @@
 
 
 
-    <EditText
-        android:id="@+id/input"
+    <com.vanniktech.emoji.EmojiEditText
+        android:id="@+id/emojiEditText"
         android:layout_toLeftOf="@id/fab"
         android:layout_toStartOf="@+id/fab"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:imeOptions="actionSend"
+        android:inputType="textCapSentences|textMultiLine"
         android:layout_marginBottom="10dp"
         android:layout_marginEnd="5dp"
+        android:drawableLeft="@drawable/ic_emoji"
         android:paddingLeft="8dp"
+        android:textSize="16sp"
         android:textColor="@color/text_black"
         android:hint="@string/message"
+        android:paddingTop="5dp"
+        android:drawablePadding="7dp"
         android:paddingStart="8dp"
         android:paddingEnd="8dp"
         android:paddingRight="8dp"
@@ -47,7 +53,8 @@
         android:layout_marginStart="5dp"
         android:layout_alignParentBottom="true"
         android:background="@drawable/message_input"
-        android:minHeight="45dp" />
+        android:minHeight="45dp"
+        android:drawableStart="@drawable/ic_emoji" />
 
 
     <ListView
@@ -64,6 +71,6 @@
         android:id="@+id/list_of_messages"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_above="@+id/input" />
+        android:layout_above="@+id/emojiEditText" />
 
 </RelativeLayout>

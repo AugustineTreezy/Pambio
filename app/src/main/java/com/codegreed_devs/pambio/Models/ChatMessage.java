@@ -53,8 +53,9 @@ public class ChatMessage {
         return messageUser;
     }
 
-    public void setMessageUser(String messageUser) {
+    public String setMessageUser(String messageUser) {
         this.messageUser = messageUser;
+        return messageUser;
     }
 
     public long getMessageTime() {
